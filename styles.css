@@ -1,0 +1,134 @@
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Primary */
+    --D-cyan:hsl(185, 75%, 39%);
+    --VDD-blue:hsl(229, 23%, 23%);
+    --DG-blue:hsl(227, 10%, 46%);
+
+    /* Neutral */
+    --D-gray: hsl(0, 0%, 59%);
+
+}
+
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    background-color: var(--D-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: -250px -300px, 200px 400px;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+}
+
+@media screen and (min-width: 375px) {
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: 1500px;
+        background-position: -505px -850px, 750px 500px;
+    }
+}
+/* Card base
+============================================*/
+.card-base {
+    margin: 145px 30px;
+    height: 373px;
+    background-image: url(images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    /* Some kind of box shadow however, I do not know the exact amount */
+}
+
+@media screen and (min-width: 375px) {
+    .card-base {
+        margin: 0;
+        width: 350px;
+    }
+}
+/* Card Top
+============================================*/
+.card-top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.card-top img {
+    margin-top: 90px;
+    width: 96px;
+    border: 5px solid #fff;
+    border-radius: 50px;
+}
+
+.card-top h1 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: var(--VDD-blue);
+}
+
+.card-top p, .card-top strong {
+    color: var(--DG-blue);
+}
+
+.card-top strong {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-top p {
+    margin: 10px 0 20px 0;
+    font-size: 14px;
+}
+
+.card-top hr {
+    width: 100%;
+    color: var(--D-gray);
+    opacity: 30%;
+}
+
+/* Card Bot
+============================================*/
+.card-bot .list-start {
+    padding: 20px 50px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    /*justify-content: space-around;*/
+    justify-items: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.list-start .list-num {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--VDD-blue);
+}
+
+.list-start ul li:last-child {
+    padding-top: 5px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--D-gray);
+}
